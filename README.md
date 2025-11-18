@@ -15,8 +15,31 @@ Connecter les gens pour faire du sport ensemble de manière sécurisée et motiv
 - 🎯 **Suivi des objectifs** - Défis personnels, progression gamifiée
 - 🧠 **Coaching IA** - Suggestions d'exercices personnalisés
 - 🛡️ **Sécurité maximale** - Signalement, QR codes, journal d'intégrité
+- 🔒 **Système de Confiance Progressif** - Déblocage sécurisé basé sur la fiabilité
 - 🛍️ **Shop intégré** - Tenues MoovUp Now et produits sportifs
 - 🧬 **Communauté dynamique** - Groupes, sessions, récompenses
+
+## 🔒 Système de Confiance Progressif
+
+MoovUp Now intègre un **système de sécurité unique** basé sur 5 niveaux de confiance :
+
+| Niveau | Badge | Description | Restrictions |
+|--------|-------|-------------|--------------|
+| **1 - Débutant** | 🔰 | 0-4 sessions | Même sexe OU groupes uniquement |
+| **2 - Confirmé** | ⚡ | 5-9 sessions | Déblocage groupes mixtes |
+| **3 - Vérifié** | ✅ | 10-19 sessions | **Déblocage sexe opposé en binôme** |
+| **4 - Expert** | 🏆 | 20-49 sessions | Priorité matching, +10% points |
+| **5 - Legend** | 👑 | 50+ sessions | Parrainage, premium offert |
+
+### Pourquoi ce système ?
+
+- 🛡️ **Protection** - Les débutants prouvent leur fiabilité avant le matching complet
+- 🎯 **Progressif** - Groupes mixtes autorisés dès le début pour socialiser en sécurité
+- ⚖️ **Équitable** - Même règles pour tous, progression par le mérite
+- 🚫 **Anti-dérive** - Évite la drague et le harcèlement
+- ✅ **QR obligatoire** - Scan sur place = preuve de présence réelle
+
+**Documentation complète :** [docs/TRUST_SYSTEM.md](docs/TRUST_SYSTEM.md)
 
 ## 🛠️ Stack Technique
 

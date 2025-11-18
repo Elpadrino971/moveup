@@ -2,6 +2,8 @@
  * MoovUp Now - User Types
  */
 
+import { TrustLevel, TrustStats } from './trust';
+
 export type UserGender = 'male' | 'female' | 'non-binary' | 'prefer-not-to-say';
 
 export type SportLevel = 'beginner' | 'intermediate' | 'advanced' | 'expert';
@@ -70,6 +72,10 @@ export type UserProfile = {
   points: number;
   badges: Badge[];
 
+  // Trust System (Système de confiance progressif)
+  trustLevel: TrustLevel;
+  trustStats: TrustStats;
+
   // Integrity
   integrity: IntegrityStatus;
 
@@ -92,6 +98,8 @@ export type PublicUserProfile = Pick<
   | 'favoriteSports'
   | 'level'
   | 'badges'
+  | 'trustLevel'
+  | 'trustStats'
   | 'integrity'
   | 'qrCode'
 >;

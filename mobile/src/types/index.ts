@@ -8,6 +8,7 @@ export * from './user';
 export * from './session';
 export * from './coaching';
 export * from './shop';
+export * from './trust';
 
 // Common types
 export type PaginatedResponse<T> = {
