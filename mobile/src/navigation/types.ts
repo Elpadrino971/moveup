@@ -14,6 +14,7 @@ export type RootStackParamList = {
   [SCREEN_NAMES.SESSION_CREATE]: undefined;
   [SCREEN_NAMES.SESSION_DETAIL]: { sessionId: string };
   [SCREEN_NAMES.SESSION_QR_SCAN]: { sessionId: string };
+  [SCREEN_NAMES.SESSION_RATING]: { sessionId: string };
   [SCREEN_NAMES.USER_PROFILE]: { userId: string };
   [SCREEN_NAMES.WORKOUT_DETAIL]: { workoutId: string };
   [SCREEN_NAMES.EXERCISE_PLAYER]: { workoutId: string };

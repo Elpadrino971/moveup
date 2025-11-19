@@ -29,6 +29,14 @@ import {
 import ReferralScreen from '../screens/main/ReferralScreen';
 import SentinelSetupScreen from '../screens/main/SentinelSetupScreen';
 
+// Session screens
+import {
+  CreateSessionScreen,
+  SessionDetailScreen,
+  SessionQRScreen,
+  SessionRatingScreen,
+} from '../screens/session';
+
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RootNavigator() {
@@ -104,6 +112,38 @@ export default function RootNavigator() {
               options={{
                 headerShown: true,
                 title: 'Mode Sentinel',
+              }}
+            />
+            <Stack.Screen
+              name={SCREEN_NAMES.SESSION_CREATE}
+              component={CreateSessionScreen}
+              options={{
+                headerShown: true,
+                title: 'Créer une session',
+              }}
+            />
+            <Stack.Screen
+              name={SCREEN_NAMES.SESSION_DETAIL}
+              component={SessionDetailScreen}
+              options={{
+                headerShown: true,
+                title: 'Détails de la session',
+              }}
+            />
+            <Stack.Screen
+              name={SCREEN_NAMES.SESSION_QR_SCAN}
+              component={SessionQRScreen}
+              options={{
+                headerShown: true,
+                title: 'Check-in QR Code',
+              }}
+            />
+            <Stack.Screen
+              name={SCREEN_NAMES.SESSION_RATING}
+              component={SessionRatingScreen}
+              options={{
+                headerShown: true,
+                title: 'Noter la session',
               }}
             />
           </>

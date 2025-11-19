@@ -34,6 +34,7 @@ export const SCREEN_NAMES = {
   SESSION_CREATE: 'SessionCreate',
   SESSION_DETAIL: 'SessionDetail',
   SESSION_QR_SCAN: 'SessionQRScan',
+  SESSION_RATING: 'SessionRating',
 
   // Map
   MAP_VIEW: 'MapView',
