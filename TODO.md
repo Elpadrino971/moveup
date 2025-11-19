@@ -3,26 +3,28 @@
 ## 🎯 MVP Core Features (Priorité Haute)
 
 ### Sessions & Matching
-- [ ] **SessionCreateScreen** - Créer une session de sport
-  - Formulaire : sport, lieu, date/heure, durée, type (1-on-1, groupe)
-  - Géolocalisation avec Mapbox
-  - Vérification des permissions (trust level)
+- [x] **Service sessions.ts** - CRUD sessions ✅
+  - createSession, getNearbySessions, joinSession
+  - Trust level validation intégrée
+  - Distance calculation (Haversine)
+- [x] **SessionCard Component** - Carte de session ✅
+  - Design complet avec toutes les infos
+  - Trust badge, rating, distance
+- [x] **FindScreen** - Liste des sessions ✅
+  - Filtres par sport et type
+  - Pull-to-refresh
+  - Empty states
+- [ ] **SessionCreateScreen** - Créer une session
+  - Formulaire : sport, lieu, date/heure, durée, type
+  - Date/time picker
+  - Vérification permissions (canCreateSession)
   - Sauvegarde dans Supabase
-- [ ] **FindScreen** - Trouver des sessions
-  - Carte interactive avec Mapbox
-  - Liste des sessions à proximité
-  - Filtres (sport, distance, date, niveau)
-  - Match basé sur le trust level
 - [ ] **SessionDetailScreen** - Détails d'une session
   - Informations complètes
   - Profil du créateur
-  - Bouton "Rejoindre"
-  - Chat de session
-- [ ] **Service matching.ts** - Logique de matching
-  - Calcul de compatibilité
-  - Vérification trust level (canMatch)
-  - Restrictions sexe opposé
-  - Alertes si blocage
+  - Bouton "Rejoindre" avec validation trust
+  - Liste des participants
+  - Chat de session (optionnel)
 
 ### QR Code System
 - [ ] Installer `react-native-qrcode-svg`
@@ -71,6 +73,99 @@
   - submitRating()
   - calculateAverageRating()
   - updateTrustLevel() - Trigger recalcul
+
+## 🤝 Co-Objectifs & Gamification (Priorité Haute)
+
+**Documentation complète:** [docs/CO_OBJECTIFS.md](docs/CO_OBJECTIFS.md)
+
+### Base de Données
+- [ ] Migration `004_co_objectives.sql`
+  - Table `daily_objectives` - Catalogue d'objectifs (hydratation, nutrition, activité, bien-être, sport)
+  - Table `user_co_objectives` - Objectifs quotidiens des users
+  - Table `co_objective_validations` - Validations avec timestamps
+  - Table `co_objective_pairs` - Binômes partageant des objectifs
+  - Table `moov_coins_transactions` - Historique gains/dépenses
+  - Fonction `calculate_daily_coins()` - Calcul des gains
+  - Fonction `check_streak()` - Vérification séries
+
+### Service Co-Objectifs
+- [ ] **Service coObjectives.ts**
+  - getDailyObjectives() - Catalogue des objectifs disponibles
+  - getUserObjectives() - Objectifs actifs de l'utilisateur
+  - validateObjective() - Marquer un objectif comme validé
+  - inviteToPair() - Inviter un binôme
+  - getPairStatus() - Statut des objectifs du binôme
+  - getStreakInfo() - Infos sur la série en cours
+  - getMoovCoinsBalance() - Solde de l'utilisateur
+
+### Screens & Components
+- [ ] **CoObjectivesScreen** - Écran principal
+  - Liste des objectifs du jour
+  - Statut de validation (user + binôme)
+  - Bouton "Validé !" pour chaque objectif
+  - Affichage de la série en cours
+  - Solde MoovCoins
+  - Bouton "Booster" le binôme
+- [ ] **SelectObjectivesScreen** - Sélection des objectifs quotidiens
+  - 5 catégories avec icônes
+  - Max 3 objectifs/jour
+  - Suggestions basées sur historique
+- [ ] **PairInviteModal** - Inviter un binôme
+  - Recherche d'utilisateur
+  - Confirmation d'invitation
+  - Liste des binômes actifs
+- [ ] **CoObjectiveCard** - Composant carte objectif
+  - Icône + titre + description
+  - Progress bars (user + binôme)
+  - État: pending / validated / failed
+  - Animation de validation ✅
+
+### MoovCoins System
+- [ ] **MoovCoinsScreen** - Historique & boutique
+  - Solde actuel
+  - Historique transactions
+  - Catalogue items virtuels
+  - Catalogue réductions produits
+- [ ] **Service moovCoins.ts**
+  - getBalance() - Solde actuel
+  - getTransactions() - Historique
+  - purchaseItem() - Acheter un item
+  - getVirtualStore() - Catalogue virtuel
+  - applyDiscount() - Utiliser une réduction
+
+### Notifications Co-Objectifs
+- [ ] Push notifications quotidiennes
+  - 8h: "Bonjour ! Tes objectifs du jour..."
+  - 12h: "Mi-journée ! Comment ça avance ?"
+  - 18h: "Plus que 4h ! @binome compte sur toi !"
+  - 21h: "Dernière ligne droite !"
+- [ ] Notifications de motivation
+  - Quand binôme valide un objectif
+  - Quand binôme galère
+  - Double win celebration
+  - Série milestone (7, 30, 90 jours)
+
+### Gamification
+- [ ] **StreakBadge** Component - Affichage de la série
+  - 🔥 Icon animé
+  - Nombre de jours
+  - Progress vers prochain palier
+- [ ] **LeaderboardScreen** - Classement hebdomadaire
+  - Top 100 utilisateurs
+  - Filtres: amis, région, global
+  - Récompenses Top 10
+- [ ] **AchievementsScreen** - Trophées débloqués
+  - Grid de badges
+  - Progress bars pour achievements en cours
+  - Récompenses en MoovCoins
+
+### Analytics Co-Objectifs
+- [ ] Dashboard analytics
+  - Taux de validation quotidien
+  - Meilleure série
+  - Total MoovCoins gagnés
+  - Objectifs favoris
+  - Comparaison avec binômes
 
 ## 🔒 Progressive Trust System (Priorité Haute)
 
