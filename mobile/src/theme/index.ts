@@ -6,7 +6,7 @@
 
 export { Colors } from './colors';
 export { Typography, TextPresets } from './typography';
-export { Spacing, BorderRadius, Shadows } from './spacing';
+export { Spacing, BorderRadius, Shadows, Durations, Easings } from './spacing';
 
 // Theme object for easy import
 export const Theme = {
