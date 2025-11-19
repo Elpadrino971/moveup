@@ -203,15 +203,49 @@ npm run supabase:migrate
 
 | 🏠 Accueil | 🔍 Trouver | 🎯 Objectifs | 🎒 Boutique | 👤 Profil |
 
-## 📱 MVP Features (Phase 1)
+## 📱 État du Développement
 
-- [x] Onboarding utilisateur
-- [x] Création de profil avec QR code
-- [x] Géolocalisation et carte interactive
-- [x] Matching et création de séances
-- [x] Système de points et badges
-- [x] Boutique basique
-- [x] Système de signalement
+### ✅ Complété (Sprint 1)
+
+**Authentification & Onboarding**
+- [x] Inscription email/password avec validation avancée
+- [x] Connexion avec Google/Apple OAuth
+- [x] Vérification de disponibilité du pseudo en temps réel
+- [x] Onboarding en 4 étapes (Sports, Objectifs, Disponibilités, Charte)
+- [x] Acceptation de la charte de sécurité
+
+**Home & Profile**
+- [x] Dashboard dynamique avec stats de confiance
+- [x] Affichage du niveau de trust (🔰 Débutant → 👑 Legend)
+- [x] Profil utilisateur complet avec QR code
+- [x] Sports et badges affichés
+- [x] Pull-to-refresh
+
+**Infrastructure**
+- [x] React Native + Expo + TypeScript
+- [x] Supabase (Auth + Database + RLS)
+- [x] Design system complet
+- [x] Navigation (Auth / Onboarding / Main)
+- [x] Service layer (auth, profile)
+- [x] Système de confiance progressif (backend)
+
+### 🚧 En Cours (Sprint 2)
+
+- [ ] Création et recherche de sessions
+- [ ] Géolocalisation avec Mapbox
+- [ ] Scanner QR code pour validation
+- [ ] Chat entre utilisateurs
+- [ ] Système de notation
+
+### 📋 À Venir
+
+- [ ] Notifications push
+- [ ] Boutique e-commerce
+- [ ] Coaching IA "Moov"
+- [ ] Gamification complète
+- [ ] Live streaming
+
+**Guide complet :** [QUICKSTART.md](QUICKSTART.md) | **TODO :** [TODO.md](TODO.md)
 
 ## 🔐 Sécurité & Éthique
 
