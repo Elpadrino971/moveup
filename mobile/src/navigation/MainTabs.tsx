@@ -8,10 +8,10 @@ import { SCREEN_NAMES } from '../constants';
 import { Colors } from '../theme';
 import { MainTabsParamList } from './types';
 
-// Placeholder screens (will be replaced)
+// Screens
 import HomeScreen from '../screens/main/HomeScreen';
 import FindScreen from '../screens/main/FindScreen';
-import GoalsScreen from '../screens/main/GoalsScreen';
+import CoachScreen from '../screens/main/CoachScreen';
 import ShopScreen from '../screens/main/ShopScreen';
 import ProfileScreen from '../screens/main/ProfileScreen';
 
@@ -61,11 +61,11 @@ export default function MainTabs() {
         }}
       />
       <Tab.Screen
-        name={SCREEN_NAMES.GOALS}
-        component={GoalsScreen}
+        name={SCREEN_NAMES.COACH}
+        component={CoachScreen}
         options={{
-          title: 'Objectifs',
-          tabBarIcon: ({ color }) => <TabIcon name="target" color={color} />,
+          title: 'Coach',
+          tabBarIcon: ({ color }) => <TabIcon name="robot" color={color} />,
         }}
       />
       <Tab.Screen
@@ -93,7 +93,7 @@ function TabIcon({ name, color }: { name: string; color: string }) {
   const icons: Record<string, string> = {
     home: '🏠',
     search: '🔍',
-    target: '🎯',
+    robot: '🤖',
     'shopping-bag': '🎒',
     user: '👤',
   };

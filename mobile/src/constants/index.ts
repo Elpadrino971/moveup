@@ -26,7 +26,7 @@ export const SCREEN_NAMES = {
   // Main tabs
   HOME: 'Home',
   FIND: 'Find',
-  GOALS: 'Goals',
+  COACH: 'Coach',
   SHOP: 'Shop',
   PROFILE: 'Profile',
 
@@ -52,6 +52,10 @@ export const SCREEN_NAMES = {
   SETTINGS: 'Settings',
   EDIT_PROFILE: 'EditProfile',
   NOTIFICATIONS: 'Notifications',
+
+  // Game-Changing Features
+  REFERRAL: 'Referral',
+  SENTINEL_SETUP: 'SentinelSetup',
 };
 
 export const QUERY_KEYS = {

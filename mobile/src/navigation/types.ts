@@ -23,13 +23,15 @@ export type RootStackParamList = {
   [SCREEN_NAMES.SETTINGS]: undefined;
   [SCREEN_NAMES.EDIT_PROFILE]: undefined;
   [SCREEN_NAMES.NOTIFICATIONS]: undefined;
+  [SCREEN_NAMES.REFERRAL]: undefined;
+  [SCREEN_NAMES.SENTINEL_SETUP]: undefined;
 };
 
 // Bottom Tabs
 export type MainTabsParamList = {
   [SCREEN_NAMES.HOME]: undefined;
   [SCREEN_NAMES.FIND]: undefined;
-  [SCREEN_NAMES.GOALS]: undefined;
+  [SCREEN_NAMES.COACH]: undefined;
   [SCREEN_NAMES.SHOP]: undefined;
   [SCREEN_NAMES.PROFILE]: undefined;
 };

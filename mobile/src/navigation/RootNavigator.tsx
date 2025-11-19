@@ -25,6 +25,10 @@ import {
   OnboardingCharterScreen,
 } from '../screens/onboarding';
 
+// Game-Changing Feature screens
+import ReferralScreen from '../screens/main/ReferralScreen';
+import SentinelSetupScreen from '../screens/main/SentinelSetupScreen';
+
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RootNavigator() {
@@ -84,7 +88,25 @@ export default function RootNavigator() {
           </>
         ) : (
           // Main App Stack - User authenticated and onboarding complete
-          <Stack.Screen name="MainTabs" component={MainTabs} />
+          <>
+            <Stack.Screen name="MainTabs" component={MainTabs} />
+            <Stack.Screen
+              name={SCREEN_NAMES.REFERRAL}
+              component={ReferralScreen}
+              options={{
+                headerShown: true,
+                title: 'Parrainage',
+              }}
+            />
+            <Stack.Screen
+              name={SCREEN_NAMES.SENTINEL_SETUP}
+              component={SentinelSetupScreen}
+              options={{
+                headerShown: true,
+                title: 'Mode Sentinel',
+              }}
+            />
+          </>
         )}
       </Stack.Navigator>
     </NavigationContainer>
