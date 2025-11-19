@@ -41,6 +41,75 @@ MoovUp Now intègre un **système de sécurité unique** basé sur 5 niveaux de 
 
 **Documentation complète :** [docs/TRUST_SYSTEM.md](docs/TRUST_SYSTEM.md)
 
+---
+
+## 💰 Modèle de Monétisation
+
+MoovUp Now utilise un **modèle freemium multi-stream** pour assurer profitabilité et croissance :
+
+### 📊 Projections An 1
+
+**Revenus : 1,2M€** | **Marge : 71%**
+
+### 💎 Offres Premium
+
+| Plan | Prix | Fonctionnalités Clés |
+|------|------|----------------------|
+| **Gratuit** | 0€ | Matching illimité, chat basique, 10km géoloc |
+| **Premium** | 9,99€/mois | Voir qui t'a visité, filtres illimités, stats avancées, +20% points |
+| **Legend** | 19,99€/mois | Coaching humain 2h/mois, analytics pro, +50% points, events VIP |
+
+### 💰 Sources de Revenus
+
+1. **Abonnements Premium** (42%) - 500k€/an
+2. **Boutique E-Commerce** (34%) - 420k€/an (produits brandés, marge 50%)
+3. **Publicité Discrète** (15%) - 180k€/an (version gratuite uniquement)
+4. **Partenariats B2B** (5%) - Salles de sport, marques, entreprises
+5. **Événements & Coaching** (4%) - Compétitions, sessions premium
+
+**Documentation détaillée :** [docs/MONETIZATION.md](docs/MONETIZATION.md)
+
+---
+
+## 🚀 Innovations Uniques
+
+MoovUp Now se différencie avec des features qu'**aucun concurrent n'a** :
+
+### 🤖 "Moov" - Coach IA Personnel
+- Suggestions ultra-personnalisées basées sur sommeil, météo, humeur
+- Messages vocaux pendant l'effort
+- Prédictions intelligentes de performance
+
+### 🎥 Session Replay AR
+- Revois ta session en réalité augmentée
+- Ghost racing contre ton record
+- Stats 3D overlay
+
+### 🏆 MoovUp Championships
+- Compétitions mensuelles officielles
+- Prizes : 500€ + trophée + premium
+- Live streaming des finales
+- Sponsoring Nike/Adidas
+
+### 📸 Stories 24h
+- Partage tes sessions comme Instagram
+- Stickers exclusifs automatiques
+- Feed communautaire engageant
+
+### 🎮 Gamification Pokémon-Style
+- Collectionne des "Moov Creatures" par sport
+- Évolution selon tes performances
+- Combats amicaux de stats
+
+### 🔴 Live Streaming
+- Stream tes sessions en direct
+- Followers encouragent en temps réel
+- Monétisation par tips
+
+**Toutes les innovations :** [docs/INNOVATIONS.md](docs/INNOVATIONS.md)
+
+---
+
 ## 🛠️ Stack Technique
 
 ### Frontend Mobile
