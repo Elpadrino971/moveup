@@ -16,7 +16,12 @@ export const SCREEN_NAMES = {
   AUTH_LANDING: 'AuthLanding',
   AUTH_SIGN_IN: 'SignIn',
   AUTH_SIGN_UP: 'SignUp',
-  AUTH_ONBOARDING: 'Onboarding',
+
+  // Onboarding
+  ONBOARDING_SPORTS: 'OnboardingSports',
+  ONBOARDING_GOALS: 'OnboardingGoals',
+  ONBOARDING_AVAILABILITY: 'OnboardingAvailability',
+  ONBOARDING_CHARTER: 'OnboardingCharter',
 
   // Main tabs
   HOME: 'Home',

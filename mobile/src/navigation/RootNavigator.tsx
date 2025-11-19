@@ -3,21 +3,41 @@
  */
 
 import React from 'react';
+import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SCREEN_NAMES } from '../constants';
 import { RootStackParamList } from './types';
+import { useAuth } from '../contexts/AuthContext';
+import { Colors } from '../theme';
 import MainTabs from './MainTabs';
 
-// Auth screens (placeholders for now)
+// Auth screens
 import AuthLandingScreen from '../screens/auth/AuthLandingScreen';
 import SignInScreen from '../screens/auth/SignInScreen';
 import SignUpScreen from '../screens/auth/SignUpScreen';
 
+// Onboarding screens
+import {
+  OnboardingSportsScreen,
+  OnboardingGoalsScreen,
+  OnboardingAvailabilityScreen,
+  OnboardingCharterScreen,
+} from '../screens/onboarding';
+
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RootNavigator() {
-  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
+  const { user, loading, isOnboardingComplete } = useAuth();
+
+  // Show loading screen while checking auth
+  if (loading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color={Colors.primary} />
+      </View>
+    );
+  }
 
   return (
     <NavigationContainer>
@@ -26,8 +46,8 @@ export default function RootNavigator() {
           headerShown: false,
         }}
       >
-        {!isAuthenticated ? (
-          // Auth Stack
+        {!user ? (
+          // Auth Stack - User not authenticated
           <>
             <Stack.Screen
               name={SCREEN_NAMES.AUTH_LANDING}
@@ -42,11 +62,40 @@ export default function RootNavigator() {
               component={SignUpScreen}
             />
           </>
+        ) : !isOnboardingComplete ? (
+          // Onboarding Stack - User authenticated but onboarding not complete
+          <>
+            <Stack.Screen
+              name={SCREEN_NAMES.ONBOARDING_SPORTS}
+              component={OnboardingSportsScreen}
+            />
+            <Stack.Screen
+              name={SCREEN_NAMES.ONBOARDING_GOALS}
+              component={OnboardingGoalsScreen}
+            />
+            <Stack.Screen
+              name={SCREEN_NAMES.ONBOARDING_AVAILABILITY}
+              component={OnboardingAvailabilityScreen}
+            />
+            <Stack.Screen
+              name={SCREEN_NAMES.ONBOARDING_CHARTER}
+              component={OnboardingCharterScreen}
+            />
+          </>
         ) : (
-          // Main App Stack
+          // Main App Stack - User authenticated and onboarding complete
           <Stack.Screen name="MainTabs" component={MainTabs} />
         )}
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Colors.background,
+  },
+});
